@@ -4,8 +4,9 @@
 yum -y update
 
 # Install PostgreSQL 11
-yum -y install https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/pgdg-centos11-11-2.noarch.rpm
-yum -y install postgresql11-server
+yum -y install https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/postgresql11-libs-11.15-1PGDG.rhel7.x86_64.rpm
+yum -y install https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/postgresql11-11.15-1PGDG.rhel7.x86_64.rpm
+yum -y install https://download.postgresql.org/pub/repos/yum/11/redhat/rhel-7-x86_64/postgresql11-server-11.15-1PGDG.rhel7.x86_64.rpm
 /usr/pgsql-11/bin/postgresql-11-setup initdb
 systemctl start postgresql-11
 systemctl enable postgresql-11
